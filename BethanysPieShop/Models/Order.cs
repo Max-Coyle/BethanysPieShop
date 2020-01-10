@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BethanysPieShop.Models
 {
@@ -60,6 +61,7 @@ namespace BethanysPieShop.Models
 
         [BindNever]
         [ScaffoldColumn(false)]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal OrderTotal { get; set; }
 
         [BindNever]

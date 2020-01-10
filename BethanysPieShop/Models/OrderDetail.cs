@@ -1,4 +1,6 @@
-﻿namespace BethanysPieShop.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace BethanysPieShop.Models
 {
     public class OrderDetail
     {
@@ -6,6 +8,7 @@
         public int OrderId { get; set; }
         public int PieId { get; set; }
         public int Amount { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
         public Pie Pie { get; set; }
         public Order Order { get; set; }
